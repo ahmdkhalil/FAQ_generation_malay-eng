@@ -1,1 +1,1 @@
-# pergas_faq_generation
+# FAQ_generation
