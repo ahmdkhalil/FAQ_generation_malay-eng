@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ Clusters</title>
+</head>
+<body>
+    <h1>FAQ Clusters</h1>
+    <div>
+        {% if faq %}
+            {% for cluster, top_sentences, top_words in faq %}
+                <h2>Questions related to: "{{ top_sentences[0] }}"</h2>
+                <p><strong>Top 5 Sentences:</strong></p>
+                <ul>
+                    {% for sentence in top_sentences %}
+                        <li>{{ sentence }}</li>
+                    {% endfor %}
+                </ul>
+                <p><strong>Top 5 Words:</strong></p>
+                <ul>
+                    {% for word in top_words %}
+                        <li>{{ word }}</li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        {% else %}
+            <p>No FAQ generated. Please upload a valid file.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

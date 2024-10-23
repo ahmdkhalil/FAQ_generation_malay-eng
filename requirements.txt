@@ -1,0 +1,11 @@
+pandas
+numpy
+matplotlib
+seaborn
+openpyxl
+scikit-learn
+nltk
+flask
+gunicorn
+Sastrawi
+langdetect
